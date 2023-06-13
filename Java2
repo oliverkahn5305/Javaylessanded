@@ -1,0 +1,42 @@
+public class Java_harjutused_okahn {
+    public static void main(String[] args) {
+        double pikkus = 178;
+        int vanus = 17;
+
+        double tollidMeeter = tollidMeetriteks(10);
+        double ellipsiPindala = ellipsiPindala(5, 3);
+        int[] tundMinutid = minutidTundideks(145);
+        double kiirus1 = kiiruseLeidmine(10, 2);
+        double kiirus2 = kiiruseLeidmine(8, 1.5);
+        double kiirusteVahe = kiirusteVahe(kiirus1, kiirus2);
+
+        // Siin saad kasutada tagastatud väärtusi vastavalt vajadusele
+    }
+
+    public static double tollidMeetriteks(double tollid) {
+        double meetrid = tollid * 0.0254;
+        return meetrid;
+    }
+
+    public static double ellipsiPindala(double pooltelgA, double pooltelgB) {
+        double pindala = Math.PI * pooltelgA * pooltelgB;
+        return pindala;
+    }
+
+    public static int[] minutidTundideks(int minutid) {
+        int tunnid = minutid / 60;
+        int jääkminutid = minutid % 60;
+        int[] tundMinutid = { tunnid, jääkminutid };
+        return tundMinutid;
+    }
+
+    public static double kiiruseLeidmine(double distants, double aeg) {
+        double kiirus = distants / aeg;
+        return kiirus;
+    }
+
+    public static double kiirusteVahe(double kiirus1, double kiirus2) {
+        double vahe = Math.abs(kiirus1 - kiirus2);
+        return vahe;
+    }
+}
