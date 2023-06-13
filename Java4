@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class okahn {
+    public static void main(String[] args) {
+        // Ülesanne 4 - Oliver Kahn
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Sisesta suvaline tekst: ");
+        String tekst = scanner.nextLine();
+
+        String suurTekst = tekst.toUpperCase();
+        System.out.println("Suurtähtedega tekst: " + suurTekst);
+
+        int märkideArv = tekst.length();
+        System.out.println("Teksti märkide arv: " + märkideArv);
+
+        String[] sõnad = tekst.split(" ");
+        int sõnadeArv = sõnad.length;
+        System.out.println("Teksti sõnade arv: " + sõnadeArv);
+
+        String esimeneSõna = sõnad[0];
+        System.out.println("Esimene sõna: " + esimeneSõna);
+
+        scanner.close();
+    }
+}
