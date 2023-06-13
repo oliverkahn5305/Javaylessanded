@@ -1,8 +1,7 @@
-public class Java_harjutused_metshein {
+public class Java_harjutused_okahn {
     public static void main(String[] args) {
         // Ülesanne 1 (Oliver Kahn)
-        System.out.println("Oliver Kahn - Java harjutused");
-
+        
         int vanus; // Täisarvuline muutuja vanuse jaoks
         double pikkus; // Komaarvuline muutuja pikkuse jaoks meetrites
         String hüüdnimi; // Muutuja hüüdnime jaoks
