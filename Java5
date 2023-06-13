@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class okahn {
+    public static void main(String[] args) {
+        // Ülesanne 5 - Oliver Kahn
+        
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Jagamistehet " + (i + 1) + " / 3");
+            System.out.print("Sisesta esimene arv: ");
+            int arv1 = scanner.nextInt();
+            System.out.print("Sisesta teine arv: ");
+            int arv2 = scanner.nextInt();
+
+            if (arv2 > 0) {
+                int tulemus = arv1 / arv2;
+                System.out.println("Jagamistulemus: " + tulemus);
+            } else {
+                System.out.println("Midagi läks valesti. Teine arv peab olema positiivne.");
+            }
+
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
