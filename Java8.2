@@ -1,0 +1,45 @@
+public class Ese {
+    private String omadus1;
+    private int omadus2;
+    private boolean omadus3;
+
+    public Ese(String omadus1, int omadus2, boolean omadus3) {
+        this.omadus1 = omadus1;
+        this.omadus2 = omadus2;
+        this.omadus3 = omadus3;
+    }
+
+    public void kirjelda() {
+        System.out.println("Ese omadused:");
+        System.out.println("1. " + omadus1);
+        System.out.println("2. " + omadus2);
+        System.out.println("3. " + omadus3);
+    }
+
+    public void tegevus1() {
+        System.out.println("Tegevus 1: ...");
+    }
+
+    public void tegevus2() {
+        System.out.println("Tegevus 2: ...");
+    }
+
+    public void tegevus3() {
+        System.out.println("Tegevus 3: ...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Ese ese1 = new Ese("Omadus 1", 10, true);
+        Ese ese2 = new Ese("Omadus 2", 20, false);
+
+        ese1.kirjelda();
+        ese1.tegevus1();
+        ese1.tegevus2();
+
+        ese2.kirjelda();
+        ese2.tegevus1();
+        ese2.tegevus3();
+    }
+}
