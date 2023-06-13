@@ -1,0 +1,54 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class okahn {
+    public static void main(String[] args) {
+        // Ülesanne 6 - Oliver Kahn
+        
+        Scanner scanner = new Scanner(System.in);
+        List<Integer> arvudeList = new ArrayList<>();
+
+        while (true) {
+            System.out.print("Sisesta täisarv (jäta tühjaks lõpetamiseks): ");
+            String sisend = scanner.nextLine();
+
+            if (sisend.isEmpty()) {
+                break;
+            }
+
+            try {
+                int arv = Integer.parseInt(sisend);
+                arvudeList.add(arv);
+            } catch (NumberFormatException e) {
+                System.out.println("Vigane sisend. Palun sisesta täisarv.");
+            }
+        }
+
+        int summa = 0;
+        for (int arv : arvudeList) {
+            summa += arv;
+        }
+        
+        double keskmine = 0.0;
+        if (!arvudeList.isEmpty()) {
+            keskmine = (double) summa / arvudeList.size();
+        }
+
+        try (FileWriter writer = new FileWriter("arvud.txt")) {
+            for (int arv : arvudeList) {
+                writer.write(arv + System.lineSeparator());
+            }
+            writer.write("Summa: " + summa + System.lineSeparator());
+            writer.write("Keskmine: " + keskmine + System.lineSeparator());
+
+            System.out.println("Andmed on salvestatud faili 'arvud.txt'.");
+        } catch (IOException e) {
+            System.out.println("Viga faili salvestamisel: " + e.getMessage());
+        }
+
+        scanner.close();
+    }
+}
