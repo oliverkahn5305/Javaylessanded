@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Ruumalad {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ruumalade arvutamine");
+        System.out.print("Vali ruumala tüüp (1-3): ");
+        int valik = Integer.parseInt(scanner.nextLine());
+
+        double ruumala = 0.0;
+        
+        if (valik == 1) {
+            System.out.print("Sisesta külje pikkus: ");
+            double kylg = Double.parseDouble(scanner.nextLine());
+            ruumala = kylg * kylg * kylg;
+        } else if (valik == 2) {
+            System.out.print("Sisesta raadius: ");
+            double raadius = Double.parseDouble(scanner.nextLine());
+            System.out.print("Sisesta kõrgus: ");
+            double korgus = Double.parseDouble(scanner.nextLine());
+            ruumala = Math.PI * raadius * raadius * korgus;
+        } else if (valik == 3) {
+            System.out.print("Sisesta raadius: ");
+            double keraRaadius = Double.parseDouble(scanner.nextLine());
+            ruumala = (4.0 / 3.0) * Math.PI * Math.pow(keraRaadius, 3);
+        } else {
+            System.out.println("Vigane valik");
+        }
+        
+        System.out.println("Ruumala: " + ruumala);
+
+        scanner.close();
+    }
+}
