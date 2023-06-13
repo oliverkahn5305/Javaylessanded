@@ -1,0 +1,21 @@
+public class Java_harjutused_metshein {
+    public static void main(String[] args) {
+        // Ülesanne 1 (Oliver Kahn)
+        System.out.println("Oliver Kahn - Java harjutused");
+
+        int vanus; // Täisarvuline muutuja vanuse jaoks
+        double pikkus; // Komaarvuline muutuja pikkuse jaoks meetrites
+        String hüüdnimi; // Muutuja hüüdnime jaoks
+
+        vanus = 17;
+        pikkus = 1.87;
+        hüüdnimi = "Oll";
+
+        // Moodustab täislause ja väljastab selle
+        System.out.println("Minu nimi on " + hüüdnimi + ", ma olen " + vanus + " aastat vana ja pikkuselt olen " + pikkus + " meetrit.");
+
+        int minuArv; // Täisarvuline muutuja minuArv jaoks
+
+        System.out.println("muutuja minuArv väärtus: " + minuArv);
+    }
+}
